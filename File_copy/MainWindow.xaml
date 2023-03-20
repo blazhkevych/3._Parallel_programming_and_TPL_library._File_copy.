@@ -3,30 +3,41 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:File_copy"
         mc:Ignorable="d"
-        Title="MainWindow" Height="150" Width="450" ResizeMode="NoResize">
+        Title="Binary file copy" Height="150" Width="450" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <Label Content="Откуда:" Grid.Row="0" Grid.Column="0" Margin="5" Padding="3"/>
-        <TextBox x:Name="Source" Grid.Row="0" Grid.Column="1" Margin="5" VerticalAlignment="Center" TextWrapping="NoWrap" Padding="3"/>
-        <Button x:Name="BtnBrowseSource" Grid.Row="0" Grid.Column="2" Margin="5" VerticalAlignment="Center" Click="btnBrowseSource_Click" Padding="3">Файл</Button>
+        <Label Content="From:" Grid.Row="0" Grid.Column="0" Margin="5" Padding="3" />
+        <TextBox x:Name="Source" Grid.Row="0" Grid.Column="1" Margin="5" VerticalAlignment="Center"
+                 TextWrapping="NoWrap" Padding="3" />
+        <Button x:Name="BtnBrowseSource" Grid.Row="0" Grid.Column="2" Margin="5" VerticalAlignment="Center"
+                Click="btnBrowseSource_Click" Padding="3">
+            File
+        </Button>
 
-        <Label Content="Куда:" Grid.Row="1" Grid.Column="0" Margin="5" Padding="3"/>
-        <TextBox x:Name="Destination" Grid.Row="1" Grid.Column="1" Margin="5" VerticalAlignment="Center" TextWrapping="NoWrap" Padding="3"/>
-        <Button x:Name="BtnBrowseDestination" Grid.Row="1" Grid.Column="2" Margin="5" VerticalAlignment="Center" Click="btnBrowseDestination_Click" Padding="3">Папка</Button>
+        <Label Content="Where:" Grid.Row="1" Grid.Column="0" Margin="5" Padding="3" />
+        <TextBox x:Name="Destination" Grid.Row="1" Grid.Column="1" Margin="5" VerticalAlignment="Center"
+                 TextWrapping="NoWrap" Padding="3" />
+        <Button x:Name="BtnBrowseDestination" Grid.Row="1" Grid.Column="2" Margin="5" VerticalAlignment="Center"
+                Click="btnBrowseDestination_Click" Padding="3">
+            Folder
+        </Button>
 
-        <Button x:Name="BtnCopy" Grid.Row="2" Grid.Column="2" Margin="5" VerticalAlignment="Center" Click="btnCopy_Click" Padding="3" >Копировать</Button>
-        <ProgressBar x:Name="ProgressBar" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,0,5,0" VerticalAlignment="Center" Minimum="0" Maximum="100" Height="24"/>
+        <Button x:Name="BtnCopy" Grid.Row="2" Grid.Column="2" Margin="5" VerticalAlignment="Center"
+                Click="btnCopy_Click" Padding="3">
+            Copy
+        </Button>
+        <ProgressBar x:Name="ProgressBar" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,0,5,0"
+                     VerticalAlignment="Center" Minimum="0" Maximum="100" Height="24" />
     </Grid>
 </Window>
